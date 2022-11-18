@@ -10,6 +10,7 @@ import java.util.HashMap;
 @Slf4j
 @Data
 public class DMOSConfig {
+    // 本地token
     private String localToken;
     // 父服务器 IP
     private String socketIP;

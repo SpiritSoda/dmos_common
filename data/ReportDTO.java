@@ -8,7 +8,9 @@ import java.util.List;
 @Data
 @ToString
 public class ReportDTO {
-    // 子节点
+    // 报告节点
+    private int id;
+    // 子节点 潜在的多层可扩展性？
     private List<Integer> childs;
     // 内存
     private double mem;
