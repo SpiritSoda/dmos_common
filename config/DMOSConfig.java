@@ -1,6 +1,6 @@
-package com.dmos.dmos_socketserver.dmos_common.config;
+package com.dmos.dmos_common.config;
 
-import com.dmos.dmos_socketserver.dmos_common.util.ConfigUtil;
+import com.dmos.dmos_common.util.ConfigUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
@@ -9,7 +9,6 @@ import java.util.HashMap;
 
 @Slf4j
 @Data
-@Component
 public class DMOSConfig {
     private String localToken;
     // 父服务器 IP

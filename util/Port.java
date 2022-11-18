@@ -1,4 +1,4 @@
-package com.dmos.dmos_socketserver.dmos_common.util;
+package com.dmos.dmos_common.util;
 
 public class Port {
     // SpringBoot的Web端口遵循HTTP_PORT

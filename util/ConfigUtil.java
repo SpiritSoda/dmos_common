@@ -1,4 +1,4 @@
-package com.dmos.dmos_socketserver.dmos_common.util;
+package com.dmos.dmos_common.util;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;

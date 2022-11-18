@@ -1,4 +1,4 @@
-package com.dmos.dmos_socketserver.dmos_common.message;
+package com.dmos.dmos_common.message;
 
 public class MessageType {
     // client2server: 心跳

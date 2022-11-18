@@ -1,7 +1,7 @@
-package com.dmos.dmos_socketserver.dmos_common.util;
+package com.dmos.dmos_common.util;
 
-import com.dmos.dmos_socketserver.dmos_common.config.DMOSConfig;
-import com.dmos.dmos_socketserver.dmos_common.data.DMOSResponse;
+import com.dmos.dmos_common.data.DMOSResponse;
+import com.dmos.dmos_common.config.DMOSConfig;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpEntity;
 import org.springframework.stereotype.Component;
@@ -9,16 +9,10 @@ import org.springframework.web.client.RestTemplate;
 
 import org.springframework.http.HttpHeaders;
 
-@Component
 public class HttpUtil {
-    private final DMOSConfig dmosConfig;
-    private final RestTemplate restTemplate;
-
     @Autowired
-    public HttpUtil(DMOSConfig dmosConfig, RestTemplate restTemplate){
-        this.dmosConfig = dmosConfig;
-        this.restTemplate = restTemplate;
-    }
+    private RestTemplate restTemplate;
+
     public DMOSResponse post(String base_url, String service, HttpHeaders headers, String json){
         HttpEntity<String> request = new HttpEntity<>(json, headers);
         if(!service.startsWith("/"))

@@ -1,4 +1,4 @@
-package com.dmos.dmos_socketserver.dmos_common.channel;
+package com.dmos.dmos_common.channel;
 
 // 只有SocketServer才需要维护与客户机的通道状态
 public class ChannelState {

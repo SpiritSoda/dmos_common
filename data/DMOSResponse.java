@@ -1,4 +1,4 @@
-package com.dmos.dmos_socketserver.dmos_common.data;
+package com.dmos.dmos_common.data;
 
 import lombok.Data;
 
