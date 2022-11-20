@@ -1,17 +1,16 @@
 package com.dmos.dmos_common.util;
 
+import com.dmos.dmos_common.data.DMOSRequest;
 import com.dmos.dmos_common.data.DMOSResponse;
-import com.dmos.dmos_common.config.DMOSConfig;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.google.gson.Gson;
 import org.springframework.http.HttpEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.web.client.RestTemplate;
 
 import org.springframework.http.HttpHeaders;
 
 public class HttpUtil {
-    public DMOSResponse post(String base_url, String service, HttpHeaders headers, String json, RestTemplate restTemplate){
-        HttpEntity<String> request = new HttpEntity<>(json, headers);
+    public DMOSResponse post(String base_url, String service, HttpHeaders headers, DMOSRequest o, RestTemplate restTemplate){
+        HttpEntity<DMOSRequest> request = new HttpEntity<>(o, headers);
         if(!service.startsWith("/"))
             service = "/" + service;
         while(base_url.endsWith("/"))

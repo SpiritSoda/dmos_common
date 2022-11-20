@@ -6,8 +6,8 @@ import java.util.HashMap;
 
 @Data
 public class DMOSRequest {
-    private HashMap<String, String> data;
-    public void put(String key, String value){
+    private HashMap<String, Object> data;
+    public void put(String key, Object value){
         data.put(key, value);
     }
 }
