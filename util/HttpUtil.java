@@ -10,10 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.http.HttpHeaders;
 
 public class HttpUtil {
-    @Autowired
-    private RestTemplate restTemplate;
-
-    public DMOSResponse post(String base_url, String service, HttpHeaders headers, String json){
+    public DMOSResponse post(String base_url, String service, HttpHeaders headers, String json, RestTemplate restTemplate){
         HttpEntity<String> request = new HttpEntity<>(json, headers);
         if(!service.startsWith("/"))
             service = "/" + service;

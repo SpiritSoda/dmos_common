@@ -11,6 +11,8 @@ import java.util.HashMap;
 @Data
 public class DMOSConfig {
     // 本地token
+    // 每个机器有自己的token，连接非register机器前向register发送token(http请求)，register会返回一个限时的连接token用于向非register机器连接
+    // 从而避免机器自己的token泄漏到非register机器
     private String localToken;
     // 父服务器 IP
     private String socketIP;
