@@ -2,9 +2,7 @@ package com.dmos.dmos_common.util;
 
 import com.dmos.dmos_common.data.DMOSRequest;
 import com.dmos.dmos_common.data.DMOSResponse;
-import com.google.gson.Gson;
 import lombok.extern.slf4j.Slf4j;
-import org.h2.util.json.JSONObject;
 import org.springframework.http.HttpEntity;
 import org.springframework.web.client.RestTemplate;
 
