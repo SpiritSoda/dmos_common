@@ -8,7 +8,10 @@ import java.util.HashMap;
 public class DMOSResponse {
     private int code;
     private String msg;
-    private HashMap<String, Object> data;
+    private HashMap<String, Object> data = new HashMap<>();
+    public DMOSResponse(){
+
+    }
     public DMOSResponse(int code, String msg, HashMap<String, Object> data){
         this.code = code;
         this.data = data;
