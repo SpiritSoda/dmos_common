@@ -11,6 +11,7 @@ public class ChannelUtil {
             return;
         Message message = new Message();
         message.setType(MessageType.HEARTBEAT);
-        channel.writeAndFlush(ParseUtil.encode(message, false));
+        channel.write(ParseUtil.encode(message, false) + "\r");
+        channel.flush();
     }
 }
