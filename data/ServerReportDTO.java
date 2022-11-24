@@ -10,4 +10,6 @@ public class ServerReportDTO {
     private int id;
     // 子节点
     private List<Integer> child;
+
+    private long timestamp;
 }

@@ -1,5 +1,8 @@
 package com.dmos.dmos_common.data;
 
+import com.dmos.dmos_common.data.state.CPU;
+import com.dmos.dmos_common.data.state.Ram;
+import com.dmos.dmos_common.data.state.Storage;
 import lombok.Data;
 import lombok.ToString;
 
@@ -11,13 +14,11 @@ public class ClientReportDTO {
     // 报告节点
     private int id;
     // 内存
-    private double mem;
+    private Ram ram;
     // CPU
-    private double cpu;
+    private CPU cpu;
     // 硬盘
-    private double disk;
-    // 温度
-    private double temperature;
-    // 操作系统
-    private String OS;
+    private Storage storage;
+
+    private long timestamp;
 }
