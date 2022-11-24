@@ -7,7 +7,7 @@ import io.netty.channel.Channel;
 
 public class ChannelUtil {
     public static void heartbeat(Channel channel){
-        if(channel == null || channel.isActive())
+        if(channel == null || !channel.isActive())
             return;
         Message message = new Message();
         message.setType(MessageType.HEARTBEAT);
