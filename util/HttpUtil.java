@@ -19,7 +19,7 @@ public class HttpUtil {
             base_url = base_url.substring(0, base_url.length() - 1);
         String url = "http://" + base_url + service;
         DMOSResponse response = restTemplate.postForObject(url, request, DMOSResponse.class);
-        log.info(response.toString());
+//        log.info(response.toString());
         return response;
     }
 }
