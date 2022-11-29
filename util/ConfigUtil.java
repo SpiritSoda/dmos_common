@@ -31,7 +31,7 @@ public class ConfigUtil {
             }
             String json = buffer.toString();
 //            log.info(json);
-            T config = ParseUtil.decode(json, new TypeToken<T>(){}.getType());
+            T config = ParseUtil.decode(json, type);
             return config;
         }
         catch (Exception e){
