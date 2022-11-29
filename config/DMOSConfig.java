@@ -1,11 +1,7 @@
 package com.dmos.dmos_common.config;
 
-import com.dmos.dmos_common.util.ConfigUtil;
 import lombok.Data;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.stereotype.Component;
-
-import java.util.HashMap;
 
 @Slf4j
 @Data

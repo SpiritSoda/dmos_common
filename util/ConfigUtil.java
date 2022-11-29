@@ -1,13 +1,14 @@
 package com.dmos.dmos_common.util;
 
 import com.dmos.dmos_common.config.DMOSConfig;
+import com.google.gson.reflect.TypeToken;
 import lombok.extern.slf4j.Slf4j;
 
 import java.io.*;
 
 @Slf4j
 public class ConfigUtil {
-    public static DMOSConfig load(String fileName){
+    public static <T extends DMOSConfig> T load(String fileName, Class<T> type){
         String path = System.getProperty("user.dir");
         File file = new File(path + "/" + fileName);
         log.info("Loading config from path: {}", file.getPath());
@@ -17,7 +18,7 @@ public class ConfigUtil {
                 DMOSConfig config = new DMOSConfig();
 
                 save(config, fileName);
-                return config;
+                return null;
             }
             InputStream in = new FileInputStream(file);
             BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -30,15 +31,15 @@ public class ConfigUtil {
             }
             String json = buffer.toString();
 //            log.info(json);
-            DMOSConfig config = ParseUtil.decode(json, DMOSConfig.class);
+            T config = ParseUtil.decode(json, new TypeToken<T>(){}.getType());
             return config;
         }
         catch (Exception e){
             e.printStackTrace();
         }
-        return new DMOSConfig();
+        return null;
     }
-    public static void save(DMOSConfig dmosConfig, String fileName){
+    public static <T> void save(T dmosConfig, String fileName){
         String path = System.getProperty("user.dir");
         File file = new File(path + "/" + fileName);
         String json = ParseUtil.encode(dmosConfig, true);
