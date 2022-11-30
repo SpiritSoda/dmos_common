@@ -3,6 +3,7 @@ package com.dmos.dmos_common.data;
 import com.dmos.dmos_common.data.state.CPU;
 import com.dmos.dmos_common.data.state.Ram;
 import com.dmos.dmos_common.data.state.Storage;
+import com.dmos.dmos_common.data.state.Swap;
 import lombok.Data;
 import lombok.ToString;
 
@@ -19,6 +20,8 @@ public class ClientReportDTO {
     private CPU cpu;
     // 硬盘
     private Storage storage;
+    // 交换空间
+    private Swap swap;
 
     private long timestamp;
 }
