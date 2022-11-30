@@ -20,9 +20,9 @@ public class DMOSConfig {
     private String localhost;
     public DMOSConfig() {
         localToken = "";
-        socketIP = "127.0.0.1:8082";
-        register = "127.0.0.1:8081";
-        storage = "127.0.0.1:8085";
-        localhost = "192.168.1.1";
+        socketIP = "127.0.0.1:";
+        register = "127.0.0.1";
+        storage = "127.0.0.1";
+        localhost = "127.0.0.1";
     }
 }
